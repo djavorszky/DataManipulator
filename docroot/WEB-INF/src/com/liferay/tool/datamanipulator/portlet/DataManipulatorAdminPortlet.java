@@ -14,16 +14,16 @@
 
 package com.liferay.tool.datamanipulator.portlet;
 
+import com.liferay.compat.portal.util.PortalUtil;
+import com.liferay.compat.util.bridges.mvc.MVCPortlet;
 import com.liferay.portal.kernel.upload.UploadPortletRequest;
 import com.liferay.portal.kernel.util.ParamUtil;
 import com.liferay.portal.kernel.util.WebKeys;
 import com.liferay.portal.theme.ThemeDisplay;
-import com.liferay.portal.util.PortalUtil;
 import com.liferay.tool.datamanipulator.datatype.PortletHandlerFactory;
 import com.liferay.tool.datamanipulator.entry.EntryTypeKeys;
 import com.liferay.tool.datamanipulator.requestprocessor.RequestProcessor;
 import com.liferay.tool.datamanipulator.runner.DataManipulatorRunner;
-import com.liferay.util.bridges.mvc.MVCPortlet;
 
 import java.util.List;
 
@@ -35,6 +35,7 @@ import javax.portlet.ActionResponse;
  *
  */
 public class DataManipulatorAdminPortlet extends MVCPortlet {
+
 	public void generateData(
 			ActionRequest actionRequest, ActionResponse actionResponse)
 		throws Exception {
@@ -44,8 +45,8 @@ public class DataManipulatorAdminPortlet extends MVCPortlet {
 
 		RequestProcessor requestProcessor = new RequestProcessor(uploadRequest);
 
-		ThemeDisplay themeDisplay =
-			(ThemeDisplay)uploadRequest.getAttribute(WebKeys.THEME_DISPLAY);
+		ThemeDisplay themeDisplay = (ThemeDisplay)uploadRequest.getAttribute(
+			WebKeys.THEME_DISPLAY);
 
 		String entryType = ParamUtil.getString(uploadRequest, "entryType");
 
