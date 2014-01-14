@@ -34,6 +34,7 @@ import java.util.List;
  *
  */
 public class MessageBoardsDisplayFields {
+
 	public static final String MESSAGE_BOARDS_CATEGORY_ID =
 		"message-boards-category-id";
 
