@@ -14,10 +14,10 @@
 
 package com.liferay.tool.datamanipulator.datatype.categories;
 
+import com.liferay.compat.portal.kernel.util.LocalizationUtil;
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.exception.SystemException;
 import com.liferay.portal.kernel.util.LocaleUtil;
-import com.liferay.portal.kernel.util.LocalizationUtil;
 import com.liferay.portlet.asset.model.AssetCategory;
 import com.liferay.portlet.asset.model.AssetCategoryConstants;
 import com.liferay.portlet.asset.service.AssetCategoryLocalServiceUtil;
@@ -34,8 +34,8 @@ import com.liferay.tool.datamanipulator.service.DataManipulatorLocalServiceUtil;
  * @author Tibor Kovács
  *
  */
-public class AssetCategoryHandler extends AbstractEntryHandler implements
-		EntryHandlerModel {
+public class AssetCategoryHandler extends AbstractEntryHandler
+	implements EntryHandlerModel {
 
 	/**
 	 * @param count
@@ -58,6 +58,7 @@ public class AssetCategoryHandler extends AbstractEntryHandler implements
 	/* (non-Javadoc)
 	 * @see com.liferay.tool.datamanipulator.handler.entryhandler.model.EntryHandlerModel#getCreateEntryArgs(long, java.lang.String, com.liferay.tool.datamanipulator.requestprocessor.RequestProcessor)
 	 */
+
 	@Override
 	public EntryArgs getCreateEntryArgs(
 			long parentId, String postString, RequestProcessor requestProcessor)
@@ -97,6 +98,7 @@ public class AssetCategoryHandler extends AbstractEntryHandler implements
 	/* (non-Javadoc)
 	 * @see com.liferay.tool.datamanipulator.handler.entryhandler.model.EntryHandlerModel#getDataManipulatorFromObject(java.lang.Object)
 	 */
+
 	@Override
 	public DataManipulator getDataManipulatorFromObject(Object createdEntry)
 		throws PortalException, SystemException {
@@ -110,20 +112,20 @@ public class AssetCategoryHandler extends AbstractEntryHandler implements
 	/* (non-Javadoc)
 	 * @see com.liferay.tool.datamanipulator.handler.entryhandler.model.EntryHandlerModel#getUpdateEntryArgs(long, java.lang.String, com.liferay.tool.datamanipulator.requestprocessor.RequestProcessor)
 	 */
+
 	@Override
 	public EntryArgs getUpdateEntryArgs(
 			long entryId, String postString, RequestProcessor requestProcessor)
 		throws PortalException, SystemException {
 
-		AssetCategory category =
-			AssetCategoryLocalServiceUtil.getCategory(entryId);
+		AssetCategory category = AssetCategoryLocalServiceUtil.getCategory(
+			entryId);
 
 		String title = EntryUtil.getEditString(
 			category.getTitle(LocaleUtil.getDefault()), postString);
 
-		String description= EntryUtil.getEditString(
-			category.getDescription(LocaleUtil.getDefault()),
-			postString);
+		String description = EntryUtil.getEditString(
+			category.getDescription(LocaleUtil.getDefault()), postString);
 
 		EntryArgs args = new EntryArgs(requestProcessor);
 
