@@ -14,13 +14,13 @@
  */
 --%>
 
+<%@ page import="com.liferay.compat.portal.util.PortalUtil" %>
 <%@ page import="com.liferay.portal.kernel.util.Constants" %>
 <%@ page import="com.liferay.portal.kernel.util.ParamUtil" %>
-<%@ page import="com.liferay.portal.util.PortalUtil" %>
 
 <%@ page import="javax.portlet.PortletURL" %>
 
-<%@include file="/init.jsp" %>
+<%@ include file="/init.jsp" %>
 
 <liferay-ui:success key="dataGenerated" message="data-generated-successfully" />
 <liferay-ui:error key="errorOccurred" message="error-occurred" />
