@@ -144,6 +144,7 @@ public class EntryTypeKeys {
 		ArrayList<String> types = new ArrayList<String>();
 
 		types.add(PORTAL_ORGANIZATION);
+		types.add(PORTAL_SITE);
 		types.add(PORTAL_TEAM);
 		types.add(PORTAL_USER);
 
