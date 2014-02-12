@@ -21,6 +21,11 @@ import java.util.ArrayList;
  *
  */
 public class EntryTypeKeys {
+
+	// Custom handler
+
+	public static final String CUSTOM_ENTRY_HANDLER = "LPS-44236";
+
 	//Lists and base names
 
 	public static final String ENTRY_TYPE_CUSTOM = "custom-entry-type";
@@ -125,6 +130,8 @@ public class EntryTypeKeys {
 
 	private static ArrayList<String> _customEntryTypes() {
 		ArrayList<String> types = new ArrayList<String>();
+
+		types.add(CUSTOM_ENTRY_HANDLER);
 
 		return types;
 	}
