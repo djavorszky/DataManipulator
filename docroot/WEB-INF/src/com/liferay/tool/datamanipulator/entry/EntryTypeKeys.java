@@ -134,6 +134,7 @@ public class EntryTypeKeys {
 		ArrayList<String> types = new ArrayList<String>();
 
 		types.add(CUSTOM_ENTRY_HANDLER);
+		types.add(CUSTOM_ROLE_TYPE);
 
 		return types;
 	}
