@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2000-2013 Liferay, Inc. All rights reserved.
+ * Copyright (c) 2000-2012 Liferay, Inc. All rights reserved.
  *
  * This library is free software; you can redistribute it and/or modify it under
  * the terms of the GNU Lesser General Public License as published by the Free
@@ -25,7 +25,7 @@ import com.liferay.portal.service.InvokableLocalService;
  * This is a local service. Methods of this service will not have security checks based on the propagated JAAS credentials because this service can only be accessed from within the same VM.
  * </p>
  *
- * @author Tibor KovĂˇcs
+ * @author Tibor Kovács
  * @see DataManipulatorLocalService
  * @see com.liferay.tool.datamanipulator.service.base.DataManipulatorLocalServiceBaseImpl
  * @see com.liferay.tool.datamanipulator.service.impl.DataManipulatorLocalServiceImpl

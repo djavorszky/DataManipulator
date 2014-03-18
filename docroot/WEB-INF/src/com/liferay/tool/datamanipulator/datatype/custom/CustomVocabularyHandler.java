@@ -48,7 +48,7 @@ public class CustomVocabularyHandler extends AbstractPortletHandler
 	@Override
 	public void startGenerate(RequestProcessor requestProcessor)
 		throws PortalException, SystemException {
-
+/*
 		// User
 
 		EntryTypeReader userEntryType = EntryReaderUtil.getEntryType(
@@ -118,6 +118,7 @@ public class CustomVocabularyHandler extends AbstractPortletHandler
 		};
 
 		siteHandler.generateEntries((long)0);
+		*/
 	}
 
 	private static Log _log = LogFactoryUtil.getLog(

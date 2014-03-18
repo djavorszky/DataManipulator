@@ -17,7 +17,7 @@ package com.liferay.tool.datamanipulator.entry;
 import java.util.ArrayList;
 
 /**
- * @author Tibor Kovács
+ * @author Tibor Kovï¿½cs
  *
  */
 public class EntryTypeKeys {
@@ -25,6 +25,8 @@ public class EntryTypeKeys {
 	// Custom handler
 
 	public static final String CUSTOM_ENTRY_HANDLER = "LPS-44236";
+
+	public static final String CUSTOM_ROLE_TYPE = "Roles";
 
 	//Lists and base names
 
