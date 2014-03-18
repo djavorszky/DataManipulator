@@ -36,7 +36,7 @@ import com.liferay.tool.datamanipulator.entry.EntryTypeKeys;
 import java.util.List;
 
 /**
- * @author Tibor Kovács
+ * @author Tibor Kovï¿½cs
  *
  */
 public final class EntryDisplayFieldsFactory {
@@ -98,6 +98,10 @@ public final class EntryDisplayFieldsFactory {
 		}
 
 		if (entryTypeKey.equals(EntryTypeKeys.CUSTOM_ENTRY_HANDLER)) {
+			return new DisplayFields().getDisplayFields();
+		}
+
+		if (entryTypeKey.equals(EntryTypeKeys.CUSTOM_ROLE_TYPE)) {
 			return new DisplayFields().getDisplayFields();
 		}
 
